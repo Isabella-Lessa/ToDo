@@ -46,27 +46,29 @@ export default function ToDo(){
       <S.ToDo>
         <S.Box>
           <S.Title>What are the plans for today?</S.Title>
-          <form onSubmit={ (e) => e.preventDefault()}>
-            <TextField
-              id="outlined-basic"
-              label="Task"
-              variant="outlined"
+          <S.Form onSubmit={ (e) => e.preventDefault()}>
+            <S.Input
               value={input}
+              placeholder="Enter a task..."
               onChange={( e => {setInput(e.target.value)} )}
             />
-            <Button variant="text" onClick={() => {Add()}}>ADD</Button>
-            <Button variant="text"  onClick={() => {Clean()}}>CLEAN</Button>
-          </form>
+            <S.BtnAdd onClick={() => {Add()}}>ADD</S.BtnAdd>
+            <S.BtnClean  onClick={() => {Clean()}}>CLEAN</S.BtnClean>
+          </S.Form>
         </S.Box>
         <S.List>
           <ol>
             {list.map( info => (
               <S.Li>
-                <S.IptBox type='checkbox'></S.IptBox>
-              {info.value}
-              <S.BtnDel onClick={() => {Del(info.id)}}>
-                <DeleteIcon/>
-              </S.BtnDel>
+                <S.BoxTxt>
+                  <S.IptBox type='checkbox'></S.IptBox>
+                  {info.value}
+                </S.BoxTxt>
+                <S.BoxBtns>
+                <S.BtnDel onClick={() => {Del(info.id)}}>
+                  <DeleteIcon/>
+                </S.BtnDel>
+                </S.BoxBtns>
               </S.Li>
             ) )} 
           </ol>

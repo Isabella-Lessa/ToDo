@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
 width: 100vw;
 height: 100vh;
-background-color: #2e2e2e;
+background-color: #ffe5ac;
 display: flex;
 justify-content: center;
 align-items: center
@@ -17,7 +17,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-background-color: #F8F8FF
+background-color: #0e2f39;
+box-shadow: 0 0 1.2em black;
 `
 
 export const Box = styled.div`
@@ -29,46 +30,93 @@ border-radius: 40px;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: #F8F8FF;
+background-color: ;
+line-heigth: 2em;
 `
 
 export const Title = styled.h1`
-font-family: 
-
+font-weight: 200;
+padding: 15px;
+color: #F8F8FF
+`
+export const Form = styled.form`
+width: 120%;
+display: flex;
+justify-content: space-evenly;
 `
 
-export const TextField = styled.input`
-width: 2em;
+export const Input = styled.input`
+width: 20em;
+height: 3em;
+padding: 10px;
+font-weight: 200;
+border-radius: 10px;
+border: 0.1em solid white;
+background-color: #0e2f39;
+background-color: black;
+color: white
 `
 
-export const Button = styled.button`
+export const BtnAdd = styled.button`
+width: 4em;
+background-color: #ffe5ac;
+border: 0.1em solid white;
+border-radius: 10px;
+font-size: 12px;
+cursor: pointer
+`
+
+export const BtnClean = styled.button`
+width: 4em;
+background-color: #ffe5ac;
+border: 0.1em solid white;
+border-radius: 10px;
+font-size: 12px;
+cursor: pointer
 `
 
 export const BtnDel = styled.button`
 border: none;
-
 margin-left: 0.5em;
-// background-color: #F8F8FF;
+background-color: #0e2f39;
 `
 
-export const BtnClean = styled.button`
-
-`
 export const IptBox = styled.input`
 background-color: blue
 
 `
 
-
 export const Li = styled.li`
 list-style: none;
+color: white;
+width: 25.1em;
+height: 2em;
+display: flex;
+justify-content: space-between;
+padding: 2em;
+margin-bottom: 1em;
+align-items: center;
+border-radius: 0.8em;
+border: 0.1em solid white;
+`
+export const BoxTxt = styled.div`
+width: 35%;
+padding: 10px;
+font-size: 18px;
+font-weight: 200;
+display: flex;
+align-items: center;
+justify-content: space-around;
+`
+
+export const BoxBtns = styled.div`
 
 `
 
 export const List = styled.div`
-width: 60%;
+width: 74%;
 height: 65%;
-background-color: 
+background-color: #0e2f39;
 
 `
 
